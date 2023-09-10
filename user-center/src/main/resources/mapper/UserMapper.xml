@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ppf.usercenter.mapper.UserMapper">
+
+    <resultMap id="BaseResultMap" type="com.ppf.usercenter.model.domain.User">
+            <id property="id" column="ID" jdbcType="BIGINT"/>
+            <result property="account" column="ACCOUNT" jdbcType="VARCHAR"/>
+            <result property="password" column="PASSWORD" jdbcType="VARCHAR"/>
+            <result property="nickName" column="NICK_NAME" jdbcType="VARCHAR"/>
+            <result property="avatar" column="AVATAR" jdbcType="VARCHAR"/>
+            <result property="gender" column="GENDER" jdbcType="TINYINT"/>
+            <result property="phone" column="PHONE" jdbcType="VARCHAR"/>
+            <result property="email" column="EMAIL" jdbcType="VARCHAR"/>
+            <result property="stuNum" column="STU_NUM" jdbcType="VARCHAR"/>
+            <result property="userRole" column="USER_ROLE" jdbcType="TINYINT"/>
+            <result property="status" column="STATUS" jdbcType="INTEGER"/>
+            <result property="createTime" column="CREATE_TIME" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="UPDATE_TIME" jdbcType="TIMESTAMP"/>
+            <result property="isDelete" column="IS_DELETE" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        ID,ACCOUNT,PASSWORD,
+        NICK_NAME,AVATAR,GENDER,
+        PHONE,EMAIL,STU_NUM,
+        USER_ROLE,STATUS,CREATE_TIME,
+        UPDATE_TIME,IS_DELETE
+    </sql>
+</mapper>
